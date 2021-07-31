@@ -2,7 +2,7 @@ This app detects the face in an image.
 
 # Getting Started
 
-This project is under development.
+This project is currently under development and has not been deployed.
 * To run this app, clone the project to your local device (master branch contains the frontend and backend branch contains the backend).
 * Run npm start for both frontend and backend.
 * The app will open on *localhost:3000*.
