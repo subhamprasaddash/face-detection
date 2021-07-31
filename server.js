@@ -34,7 +34,7 @@ const database = knex({
 */
 
 app.get("/", (req, res) => {
-  res.json(db.users);
+  res.send("connected to backend");
 });
 
 app.post("/signin", (req, res) => {
@@ -136,6 +136,9 @@ app.put("/imageRank", (req, res) => {
     .catch((err) => res.status(400).json(err));
 });
 
-app.listen(3002, () => {
-  console.log("app is listening to port 3002");
-});
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3002;
+  console.log(`PORT is set to ${port}`);
+}
+app.listen(port);
